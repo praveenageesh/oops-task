@@ -1,0 +1,13 @@
+public class Movie {
+    private String title;
+    private String studio;
+    private String rating;
+
+    // Constructor with three parameters
+    public Movie(String title, String studio, String rating) {
+        this.title = title;
+        this.studio = studio;
+        // Set default rating to "PG" if no rating is provided
+        this.rating = (rating != null && !rating.isEmpty()) ? rating : "PG";
+    }
+}
