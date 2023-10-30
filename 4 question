@@ -1,0 +1,25 @@
+write a class to calculate the uber price.
+
+public class UberCalculator {
+    private static final double BASE_FARE = 2.50; // Base fare in dollars
+    private static final double COST_PER_KM = 1.50; // Cost per kilometer in dollars
+    private static final double COST_PER_MINUTE = 0.25; // Cost per minute in dollars
+
+    // Method to calculate Uber price based on distance (in kilometers) and time (in minutes)
+    public static double calculatePrice(double distance, int timeInMinutes) {
+        double price = BASE_FARE + (distance * COST_PER_KM) + (timeInMinutes * COST_PER_MINUTE);
+        return price;
+    }
+
+    // Main method to test the UberCalculator class
+    public static void main(String[] args) {
+        double distance = 10.5; // Distance in kilometers
+        int timeInMinutes = 20; // Time in minutes
+
+        // Calculate Uber price
+        double totalPrice = calculatePrice(distance, timeInMinutes);
+
+        // Print the calculated price
+        System.out.println("Uber Price: $" + totalPrice);
+    }
+}
