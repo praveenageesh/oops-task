@@ -1,0 +1,28 @@
+public class Movie {
+    // ... (previous code)
+
+    // Method to get movies with a rating of "PG" from the input array
+    public static Movie[] getPG(Movie[] movies) {
+        // Count how many movies have a rating of "PG"
+        int countPG = 0;
+        for (Movie movie : movies) {
+            if (movie.rating.equals("PG")) {
+                countPG++;
+            }
+        }
+
+        // Create a new array with the size of countPG to store movies with "PG" rating
+        Movie[] pgMovies = new Movie[countPG];
+        int index = 0;
+
+        // Fill pgMovies array with movies having a rating of "PG"
+        for (Movie movie : movies) {
+            if (movie.rating.equals("PG")) {
+                pgMovies[index] = movie;
+                index++;
+            }
+        }
+
+        return pgMovies;
+    }
+}
